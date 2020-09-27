@@ -6,20 +6,14 @@ public class ConsecutiveArray{
 		int count=0;
 		int maxcount=0;
 		 for (int i = 0; i<a.length; i++) {
-			 for (int j = 0; j<a[i].length; j++) {
-	        	 if(a[i][j]==0)
+			 for (int j = 0; j<a[i].length-1; j++) {
+	        	 if(a[i][j]==0 && [i][j+1]==0)
 	        	 {
 	        		 count++;
-	        		 maxcount=Math.max(count,maxcount);
-	        		 break;
-	        	 }
-	        	 else
-	        	 {
-	        		 count=0;
-	        	 }
+	        	 }	        	 
 			 }
 		 }
-		 return maxcount;
+		 return count;
 		 }
 		 
 	public static void main(String args[])
